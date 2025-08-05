@@ -2,11 +2,23 @@
   "name": "http-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./dist/index.js",
+    "dev": "npm run build && nodemon ./dist/index.js",
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/ws": "^8.18.1",
+    "ws": "^8.18.3"
+  }
 }
